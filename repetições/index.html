@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Exercícios JavaScript</title>
+</head>
+<body>
+ <meta charset="UTF-8">
+ <title>Folha de Pagamento</title>
+
+<h1>Folha de Pagamento - Meia Meia Meia</h1>
+
+<script>
+
+let quantidade = Number(prompt("Quantos salários serão digitados?"));
+
+let folhaAntiga = 0;
+let folhaNova = 0;
+let maiorSalario = 0;
+
+for(let i = 1; i <= quantidade; i++){
+
+    let salario = Number(prompt("Digite o salário " + i + ":"));
+
+    folhaAntiga += salario;
+
+    let salarioNovo = salario;
+
+    if(salario < 2500){
+        salarioNovo = salario * 1.10;
+    }
+
+    folhaNova += salarioNovo;
+
+    if(salarioNovo > maiorSalario){
+        maiorSalario = salarioNovo;
+    }
+}
+
+document.write("<h2>Resultado</h2>");
+document.write("Total da folha antiga: R$ " + folhaAntiga.toFixed(2) + "<br>");
+document.write("Total da folha corrigida: R$ " + folhaNova.toFixed(2) + "<br>");
+document.write("Maior salário após aumento: R$ " + maiorSalario.toFixed(2));
+
+</script>
+
+</body>
+</html>
+<script>
+        // 1. Aclamação repetida
+        let palavra = prompt("Digite uma palavra:");
+
+        document.write("<h2>1. Aclamação Repetida</h2>");
+
+        for(let i = 1; i <= 10; i++){
+            document.write(palavra + "<br>");
+        }
+
+
+        // 2. Somando números pares
+        let numero = Number(prompt("Digite um número:"));
+        let soma = 0;
+
+        for(let i = 2; i <= numero; i += 2){
+            soma += i;
+        }
+
+        document.write("<h2>2. Soma dos Números Pares</h2>");
+        document.write("Resultado: " + soma + "<br>");
+
+
+        // 3. Lista de compras
+        let lista = [];
+        let item;
+
+        do{
+            item = prompt("Digite um item da lista ou 0 para parar:");
+
+            if(item != "0"){
+                lista.push(item);
+            }
+
+        }while(item != "0");
+
+        document.write("<h2>3. Lista de Compras</h2>");
+
+        for(let i = 0; i < lista.length; i++){
+            document.write(lista[i] + "<br>");
+        }
+
+
+        // 4. Números ímpares inversos
+        let n = Number(prompt("Digite um número:"));
+
+        document.write("<h2>4. Ímpares Inversos</h2>");
+
+        for(let i = n; i >= 1; i--){
+            if(i % 2 != 0){
+                document.write(i + "<br>");
+            }
+        }
+
+
+        // 5. Sequência de asteriscos
+        document.write("<h2>5. Sequência de Asteriscos</h2>");
+
+        for(let i = 1; i <= 5; i++){
+
+            for(let j = 1; j <= i; j++){
+                document.write("*");
+            }
+
+            document.write("<br>");
+        }
+
+
+        // 6. Jogo de adivinhação
+        let secreto = Math.floor(Math.random() * 100) + 1;
+        let tentativas = 0;
+        let palpite;
+
+        do{
+            palpite = Number(prompt("Adivinhe um número entre 1 e 100"));
+            tentativas++;
+
+            if(palpite > secreto){
+                alert("Muito alto!");
+            }
+            else if(palpite < secreto){
+                alert("Muito baixo!");
+            }
+            else{
+                alert("Parabéns! Você acertou em " + tentativas + " tentativas.");
+            }
+
+        }while(palpite != secreto);
+
+
+        // 7. Preenchendo um quadro
+        let largura = Number(prompt("Digite a largura do quadro"));
+        let altura = Number(prompt("Digite a altura do quadro"));
+
+        document.write("<h2>7. Quadro</h2>");
+
+        for(let i = 1; i <= altura; i++){
+
+            for(let j = 1; j <= largura; j++){
+                document.write("#");
+            }
+
+            document.write("<br>");
+        }
+
+    </script>
+
+</body>
+</html>
+// 1. Quadrado dos números de 1 a 10
+document.write("<h3>1. Quadrados</h3>");
+for(let i = 1; i <= 10; i++){
+    document.write(i + "² = " + (i * i) + "<br>");
+}
+
+// 2. Números de 10 a 1
+document.write("<h3>2. De 10 a 1</h3>");
+for(let i = 10; i >= 1; i--){
+    document.write(i + "<br>");
+}
+
+// 3. Soma de 1 a 100
+let soma = 0;
+
+for(let i = 1; i <= 100; i++){
+    soma += i;
+}
+
+document.write("<h3>3. Soma de 1 a 100</h3>");
+document.write("Resultado: " + soma + "<br>");
+
+// 4. Tabuada do 5
+document.write("<h3>4. Tabuada do 5</h3>");
+
+for(let i = 1; i <= 10; i++){
+    document.write(i + " x 5 = " + (i * 5) + "<br>");
+}
+
+// 5. Tabuada escolhida
+let numero = Number(prompt("Digite um número"));
+
+document.write("<h3>5. Tabuada do " + numero + "</h3>");
+
+for(let i = 1; i <= 10; i++){
+    document.write(i + " x " + numero + " = " + (i * numero) + "<br>");
+}
+
+// 6. Ímpares de 1 a 20
+document.write("<h3>6. Ímpares</h3>");
+
+for(let i = 1; i <= 20; i++){
+    if(i % 2 != 0){
+        document.write(i + "<br>");
+    }
+}
+
+// 7. Crescente e decrescente
+document.write("<h3>7. Crescente</h3>");
+
+for(let i = 1; i <= 10; i++){
+    document.write(i + "<br>");
+}
+
+document.write("<h3>Decrescente</h3>");
+
+for(let i = 10; i >= 1; i--){
+    document.write(i + "<br>");
+}
+
+// 8. Fatorial
+let n = Number(prompt("Digite um número para o fatorial"));
+
+let fatorial = 1;
+
+for(let i = 1; i <= n; i++){
+    fatorial *= i;
+}
+
+document.write("<h3>8. Fatorial</h3>");
+document.write("Resultado: " + fatorial + "<br>");
+
+// 9. FizzBuzz
+document.write("<h3>9. FizzBuzz</h3>");
+
+for(let i = 1; i <= 100; i++){
+
+    if(i % 3 == 0 && i % 5 == 0){
+        document.write("FizzBuzz<br>");
+    }
+
+    else if(i % 3 == 0){
+        document.write("Fizz<br>");
+    }
+
+    else if(i % 5 == 0){
+        document.write("Buzz<br>");
+    }
+
+    else{
+        document.write(i + "<br>");
+    }
+}
+
+// 10. Série
+let serie = 0;
+
+for(let i = 1; i <= 10; i++){
+    serie += 1 / i;
+}
+
+document.write("<h3>10. Série</h3>");
+document.write(serie + "<br>");
+
+</script>
+
+</body>
+</html>
+
+
