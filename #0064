@@ -1,0 +1,72 @@
+// let i = 0
+// while (i<10){
+// i++
+// let quadrado = i * i
+// console.log(i + ":" + quadrado);
+// }
+
+// Imprima os números de 10 a 1 em ordem decrescente.
+// let contador = 10
+// while(contador>=1){
+// console.log(contador)
+// contador--
+// }
+
+//Calcule a soma dos números de 1 a 100.
+// let  soma=0, i=0
+// while(i < 100){
+//     i++
+//     soma = soma + i
+   
+//     console.log(soma)
+// }
+
+//Imprima a tabuada do 5.
+// let i = 0
+// while(i < 10){
+//     i++
+//     let cinco = i * 5
+//     console.log(cinco)
+// }
+
+//Altere o programa anterior para fornecer a tabuada do número que o usuário pedir.
+// let i = 0
+// let numero = Number(prompt("digite um numero"))
+// while(i < 10){
+//     i++
+//     let tabuada = i * numero
+//     console.log(tabuada)
+// }
+
+//Mostre os números ímpares de 1 a 20.
+// let i = -0.5
+// while(i < 9){
+//     i++
+//     let impar = i * 2
+//     console.log(impar)
+// }
+
+//Imprima os números de 1 a 10 em ordem crescente, depois imprima-os em ordem decrescente.
+// 1. Ordem Crescente
+// let crescente = 1;
+// while (crescente <= 10) {
+//   console.log(crescente); // Imprime primeiro
+//   crescente++;            // Soma depois
+// }
+// // 2. Ordem Decrescente
+// let decrescente = 10;
+// while (decrescente >= 1) {
+//   console.log(decrescente);
+//   decrescente--;
+// }
+
+//Calcule o fatorial de um número dado.
+// let numero = 5; 
+// let fatorial = 1;
+// while (numero > 1) {
+//     fatorial *= numero; 
+//     numero--;          
+// }
+// console.log(fatorial);
+
+//🐱‍🏍Imprima os números de 1 a 100, substituindo os múltiplos de 3 por "Fizz", os múltiplos de 5 por "Buzz" e os múltiplos de ambos por "FizzBuzz"
