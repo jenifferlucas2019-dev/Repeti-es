@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercícios de Repetição</title>
+</head>
+<body>
+
+<script>
+
+// 1. Aclamação repetida
+document.write("<h3>1. Aclamação repetida</h3>");
+let palavra = prompt("Digite uma palavra:");
+
+for(let i = 1; i <= 10; i++){
+    document.write(palavra + "<br>");
+}
+
+// 2. Somando números pares
+document.write("<h3>2. Somando números pares</h3>");
+let numero = parseInt(prompt("Digite um número:"));
+let soma = 0;
+
+for(let i = 2; i <= numero; i += 2){
+    soma += i;
+}
+
+document.write("Soma dos números pares: " + soma + "<br>");
+
+// 3. Lista de compras
+document.write("<h3>3. Lista de compras</h3>");
+document.write("<ul>");
+
+let item;
+
+while(true){
+    item = prompt("Digite um item da lista (0 para parar)");
+
+    if(item == "0"){
+        break;
+    }
+
+    document.write("<li>" + item + "</li>");
+}
+
+document.write("</ul>");
+
+// 4. Números ímpares inversos
+document.write("<h3>4. Números ímpares inversos</h3>");
+let numImpar = parseInt(prompt("Digite um número:"));
+
+for(let i = numImpar; i >= 1; i--){
+    if(i % 2 != 0){
+        document.write(i + "<br>");
+    }
+}
+
+// 5. Sequência de asteriscos
+document.write("<h3>5. Sequência de asteriscos</h3>");
+
+for(let i = 1; i <= 5; i++){
+    for(let j = 1; j <= i; j++){
+        document.write("*");
+    }
+    document.write("<br>");
+}
+
+// 6. Jogo de adivinhação
+document.write("<h3>6. Jogo de adivinhação</h3>");
+
+let secreto = Math.floor(Math.random() * 100) + 1;
+let palpite;
+let tentativas = 0;
+
+do{
+    palpite = parseInt(prompt("Adivinhe o número de 1 a 100"));
+    tentativas++;
+
+    if(palpite > secreto){
+        alert("Muito alto!");
+    }else if(palpite < secreto){
+        alert("Muito baixo!");
+    }else{
+        alert("Acertou em " + tentativas + " tentativas!");
+    }
+
+}while(palpite != secreto);
+
+document.write("Você acertou em " + tentativas + " tentativas.<br>");
+
+// 7. Preenchendo um quadro
+document.write("<h3>7. Preenchendo um quadro</h3>");
+
+let largura = parseInt(prompt("Digite a largura do quadro:"));
+let altura = parseInt(prompt("Digite a altura do quadro:"));
+
+for(let i = 1; i <= altura; i++){
+    for(let j = 1; j <= largura; j++){
+        document.write("#");
+    }
+    document.write("<br>");
+}
+
+</script>
+
+</body>
+</html>
